@@ -1,0 +1,70 @@
+/* components/classify/index.wxss */
+.tag{
+  width: 135rpx;
+  position: fixed;
+  top: 42px;
+  left: 0
+}
+.classify-container .books-container{
+  width: 80%;
+  margin-top:47px;
+  float: right
+}
+.loading {
+  margin: 50rpx 0 50rpx 0;
+}
+
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.empty-tip {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  /* left: 275rpx; */
+}
+
+/* components/search/index.wxss */
+.search-container {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width:100%;
+  background-color: #fff;
+  padding-bottom:10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1
+}
+.search-container .input-container{
+  display:flex;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  width: 85%;
+  height: 32px;
+  justify-content: space-between;
+  text-align: center
+}
+.search-container .input-container input{
+  height: 32px;
+  color: #999;
+  font-size: 14px;
+  width:95%
+}
+.icon-delete{
+  margin-right: 10rpx;
+  color: #000065;
+  font-weight: bold;
+  font-size: 20px
+}
+.icon {
+  width: 14px;
+  height: 14px;
+}

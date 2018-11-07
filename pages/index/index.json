@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+      "v-books": "../../components/list/index",
+      "v-banner": "../../components/banner/index"
+    }
+}

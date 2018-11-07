@@ -1,0 +1,26 @@
+<!--components/classify/index.wxml -->
+
+<view class="search-container">
+  <view class='input-container'>
+    <input placeholder-class='in-bar' placeholder='搜索您想要的商品' class='bar' bind:confirm="onConfirm" value="{{q}}" auto-focus="true" />
+    <view class='icon-delete'  bind:tap="onDelete" >×</view>
+  </view>
+  <image class="icon" src="../../images/search.png" />
+</view>
+
+<view class='classify-container'>
+
+  <view class='tag'>
+    <v-tag bind:tapping="onConfirm" text="{{item}}" wx:for="{{hotWords}}" wx:key=""></v-tag>
+  </view>
+
+  <view class="books-container">
+    <block wx:for="{{dataArray}}" wx:key="{{item.id}}">
+      <v-book book="{{item}}" class="book" />
+    </block>
+  </view>
+
+  <v-loading class="loading-center" wx:if="{{loadingCenter}}" />
+  <v-loading class="loading" wx:if="{{loading}}" />
+  <text wx:if="{{noneResult}}" class="empty-tip">没有搜索到书籍</text>
+</view>

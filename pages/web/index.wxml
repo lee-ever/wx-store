@@ -1,0 +1,89 @@
+<!--pages/web/index.wxml-->
+<view class="taber bgf">
+  <text>待接受</text>
+  <text class="actived">进行中</text>
+  <text>已完成</text>
+</view>
+<view class='content-top bgf'>
+
+  <view class="content-top-header">
+    <view class="colorred">
+      任务编号：12992393239210
+    </view>
+    <view class="carid">
+      浙A.1S890S
+    </view>
+  </view>
+  <view class="title">当前路段</view>
+  <view class="roadsection">
+    <view>
+      <view class="state">中转</view>
+      <view class="adress">南京</view>
+    </view>
+    <view class="lines">
+      <view class="circle"></view>
+      <view class="line"></view>
+      <view class="circle"></view>
+    </view>
+    <view>
+      <view class="state">到站</view>
+      <view class="adress">北京</view>
+    </view>
+  </view>
+  <view class="time">
+    实际发车：
+    <text class='colorred'>8月10日 上午10:00</text>
+  </view>
+</view>
+<view class="errortype bgf">
+  <view class="title">选择异常类型</view>
+  <view class='content'>
+    <view class="li" hover-class="hover">
+      <text>道路堵车</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>车辆绕行</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>道路堵车</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>车辆绕行</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>道路堵车</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>车辆绕行</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>道路堵车</text>
+    </view>
+    <view class="li" hover-class="hover">
+      <text>车辆绕行</text>
+    </view>
+  </view>
+</view>
+<view class="cause bgf">
+  <view class="title">填写异常原因<text class="colorred">（必填，最多100个字）</text></view>
+  <view class='content'>
+    <textarea bindblur="bindTextAreaBlur" auto-focus placeholder="多行输入" />
+  </view>
+</view>
+
+<view class="bgf upload-content">
+  <view class="title">上传图片<text class="colorred">（必填，最多上传三张图片）</text></view>
+  <view class='content'>
+   <view class="upload" bindtap='onUploading'></view>
+  </view>
+  <view class='location'>
+    <view class='location-left'>
+      <view class='icon-location'><image src='../../images/location.png'></image></view>
+      {{adress}}
+    </view>
+    <view class='location-right' bindtap='relocation'>
+      重新定位
+    </view>
+  </view>
+</view>
+<button class='button'>提交</button>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "v-banner": "../../components/banner/index"
+  }
+}

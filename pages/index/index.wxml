@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <v-search></v-search> -->
+
+  <!-- <swiper class="banner-swiper" indicator-dots="true" interval="2000" duration="500" circular="true">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="item.id">
+      <image src="{{item.image}}" class="slide-image" />
+    </swiper-item>
+  </swiper> -->
+  <v-banner imgurls="{{imgUrls}}"></v-banner>
+
+  <view class="img-container">
+    <image src='{{imgUrls[0].image}}' class='img-left'></image>
+    <view class='img-right'>
+      <image src='{{imgUrls[1].image}}' class='img-top'></image>
+      <view class='img-bottom'>
+        <image src='{{imgUrls[2].image}}'></image>
+        <image src='{{imgUrls[3].image}}'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>- 限时抢购 -</view>
+
+  <block class='list' wx:for='{{books}}' wx:key="id">
+      <v-books book='{{item}}' bind:getcart="addToCart"></v-books>
+  </block>
+
+  
+
+  <navigator open-type="switchTab" url="../cart/index">
+    
+    <view class="carts-icon {{scaleCart?'on':''}}" wx:if="{{hasCarts}}">
+        <image src="../../images/shoppingcart.png"></image>
+        <text class="carts-icon-num" >{{totalNum}}</text>
+    </view>
+    <image src="../../images/shoppingcart.png" class="to-carts-icon" wx:if="{{show}}"></image>
+  </navigator>
+</view>

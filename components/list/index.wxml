@@ -1,0 +1,20 @@
+<!--components/list/index.wxml-->
+<view class='list'>
+  <view class='img' bind:tap='onTap'>
+    <image src="{{book.image}}"></image>
+    <view class='icon'>关注：{{book.fav_nums}}</view>
+  </view>
+  <view class='content'>
+    <text class='text'>{{book.title}}</text>
+    <view class='text-content'>
+      <view>
+      <text class='now'>￥6.3</text><text class='old'>￥10.3</text>
+      </view>
+      <text class='buy' bind:tap="addToCart">立即购买</text>
+    </view>
+    <view class='time'>
+      <text class='t-left'>预售时间：10-26 20：00</text>
+      <text class='t-right'>结束时间：10-27 20：00</text>
+    </view>
+  </view>
+</view>

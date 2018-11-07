@@ -1,0 +1,56 @@
+
+<!--pages/detail/detail.wxml-->
+<view class="container">
+
+  <v-banner imgurls="{{imgUrls}}"></v-banner>
+
+  <view class="head">
+      <text class='title'>{{book.title}}</text>
+      <text class='author'>
+        <text class='now'>￥6.3</text>
+        <text class='old'>￥10.3</text>
+      </text>
+      <view class='guanzhu'>
+      <text>关注数：{{book.isbn}}</text>
+      <text>更新日期：{{book.pubdate}}</text>
+      </view>
+  </view>
+  <!-- tab -->
+<view class='tab'>
+  <view class="swiper-tab">
+      <view class="swiper-tab-item {{curIndex==0?'active':''}}" data-index="0" bindtap="clickTab">书本信息</view>
+      <view class="swiper-tab-item {{curIndex==1?'active':''}}" data-index="1" bindtap="clickTab">内容简介</view>
+  </view>
+    <view>
+        <view class="detail" wx:if="{{curIndex === 0}}">
+        <view class='detail-contaner'>
+          <view class="vertical vertical1">
+            <text class="description">作者</text>
+            <text class="description">出版社</text>
+            <text class="description">出版年</text>
+            <text class="description">页数</text>
+            <text class="description">定价</text>
+            <text class="description">装帧</text>
+          </view>
+          <view class="vertical">
+            <text class="">{{book.author}}</text>
+            <text class="">{{book.publisher}}</text>
+            <text class="">{{book.pubdate}}</text>
+            <text class="">{{book.pages}}</text>
+            <text class="">{{book.price}}</text>
+            <text class="">{{book.binding}}</text>
+          </view>
+        </view>
+        </view>
+        <view class="detail" wx:if="{{curIndex === 1}}">
+          <text>{{book.summary}}{{book.summary}}</text>
+        </view>
+  </view>
+</view>
+  <!-- tab -->
+
+  <view class='button'>
+    <text class='buy cart'>加入购物车</text>
+    <text class='buy'>立即购买</text>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/user/index.wxml-->
+
+<view class="userinfo">
+    <image src="../../images/my@bg.png" class="bg"></image>
+    <button wx:if="{{!authorize}}" open-type="getUserInfo" class="avatar-position" bindgetuserinfo="onGetUserInfo">
+      <image slot="img" class="avatar" src="../../images/user.png" /> 
+    </button>
+
+    <view class="avatar-container avatar-position" wx:if="{{authorize}}">
+      <image src="{{userInfo.avatarUrl}}" class="avatar" />
+      <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class='order-nav'>
+      <text>全部订单</text>
+      <text>未付款</text>
+      <text>待发货</text>
+      <text>已完成</text>
+    </view>
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+      获取头像昵称
+    </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+    
+</view>
+
+<view class='order'>
+  <text class='title'>我的订单</text>
+  <canvas canvas-id="canvas1" class='canvas'></canvas>
+</view>
+<view class="usermotto">
+  <view class='li'><icon type="info" size="20" color='#000056'/>信息资料</view>
+  <view class='li'><icon type="info" size="20" color='#000056'/>配货信息</view>
+  <view class='li'><icon type="info" size="20" color='#000056'/>我的优惠卷</view>
+</view>

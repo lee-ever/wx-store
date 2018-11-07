@@ -1,0 +1,17 @@
+/* components/tag/index.wxss */
+.classify text{
+  background: #fff;
+  height: 30px;
+  line-height: 30px;
+  width:115rpx;
+  display: block;
+  margin-top: 5px;
+  padding: 0 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.classify text.actived{
+  color: #fff;
+  background: #a4a4ce;
+}

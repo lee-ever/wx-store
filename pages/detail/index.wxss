@@ -1,0 +1,173 @@
+/* pages/detail/detail.wxss */
+
+.container {
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.head {
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.title {
+  color: #2f2f2f;
+  font-size: 18px;
+  width: 100%;
+  display: block;
+}
+
+.author {
+  padding-top: 10px;
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+}
+
+.guanzhu {
+  border-top: 1px solid #f2f2f2;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+}
+
+.now {
+  color: red;
+  font-size: 18px;
+}
+
+.old {
+  color: #ccc;
+  padding-left: 10px;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buy {
+  border: 1px solid #ff0036;
+  background: #ff0036;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+}
+
+.cart {
+  background: #7f7fb2;
+  color: #fff;
+  border-color: #7f7fb2;
+}
+
+.sub-container {
+  width: 690rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 30rpx;
+  line-height: 24px;
+  margin-bottom: 30rpx;
+  margin-top: 10px;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+}
+
+.content-text {
+  text-indent: 40rpx;
+  color: #000;
+  font-weight: 500;
+}
+
+.tab {
+  background: #fff;
+  margin-top: 10px;
+  margin-bottom: 55px;
+}
+
+.swiper-tab {
+  width: 100%;
+  margin: 0 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.swiper-tab-item {
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  margin-right: 15px;
+}
+
+.detail {
+  padding: 10px;
+  font-size: 28rpx;
+  color: #666;
+  text-indent: 40rpx;
+}
+
+.active {
+  border-bottom: 1px solid red;
+  color: red;
+}
+
+.scoll-h {
+  height: 100%;
+  overflow: hidden;
+}
+
+.description {
+  color: #999;
+  margin-right: 30rpx;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+}
+
+.vertical1 {
+  align-items: flex-end;
+}
+
+.detail-contaner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}

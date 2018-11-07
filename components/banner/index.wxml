@@ -1,0 +1,6 @@
+<!--components/banner/index.wxml-->
+<swiper class="banner-swiper" indicator-dots="true" interval="2000" duration="500" circular="true">
+    <swiper-item wx:for="{{imgurls}}" wx:key="item.id">
+      <image src="{{item.image}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
